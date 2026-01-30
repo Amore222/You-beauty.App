@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Color Palette inspired by beauty products */
+:root {
+  /* Primary Color - Earthy Brown/Orange */
+  --color-primary: #d07849;
+  --color-primary-light: #e09b78;
+  --color-primary-dark: #b56236;
+
+  /* Secondary Color - Warm Peach */
+  --color-secondary: #e49f86;
+  --color-secondary-light: #f2c7b8;
+  --color-secondary-dark: #cc7d64;
+
+  /* Accent Color - Golden Sand */
+  --color-accent: #e3a362;
+  --color-accent-light: #f1c596;
+  --color-accent-dark: #c58645;
+
+  /* Neutral Colors */
+  --color-cream: #faf7f2;
+  --color-beige: #e8dfd0;
+  --color-gray-light: #f8f8f8;
+  --color-gray-medium: #d1d1d1;
+  --color-text-dark: #2d2d2d;
+
+  /* Gradient Backgrounds */
+  --gradient-primary: linear-gradient(135deg, #d07849 0%, #e3a362 100%);
+  --gradient-secondary: linear-gradient(135deg, #e49f86 0%, #e3a362 100%);
+  --gradient-accent: linear-gradient(135deg, #f1c596 0%, #e49f86 100%);
+}
+
+/* Smooth Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease-out;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Stagger animation delays for children */
+.stagger-children>* {
+  animation: slideUp 0.6s ease-out;
+}
+
+.stagger-children>*:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.stagger-children>*:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.stagger-children>*:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.stagger-children>*:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.stagger-children>*:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.stagger-children>*:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* Custom Utility Classes */
+.gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.gradient-secondary {
+  background: var(--gradient-secondary);
+}
+
+.gradient-accent {
+  background: var(--gradient-accent);
+}
+
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glassmorphism Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Smooth Transitions */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
