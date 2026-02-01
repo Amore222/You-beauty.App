@@ -6,7 +6,9 @@ import About from "../components/About";
 import Beauty_Prod from "../components/Beauty_Prod";
 import Shop from "../components/Shop";
 import Contact from "../components/Contact";
-import addBrand from "../components/AddBrand";
+import AboutUs from "../components/AboutUs";
+import Brand from "../components/Brand";
+import AddBrand from "../components/AddBrand";
 
 function HomePage() {
     return (
@@ -21,7 +23,9 @@ function HomePage() {
             <Beauty_Prod />
             <About />
             <Shop />
-            <addBrand />
+            <Brand />
+            <AddBrand />
+            <AboutUs />
             <Contact />
             <Footer />
         </div>

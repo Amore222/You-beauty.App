@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import img1 from "../assets/mosture-cream.jpeg";
-import img2 from "../assets/organic-oil.jpeg";
+import img1 from "../assets/natural-beauty.jpg";
+import img2 from "../assets/sea-salt.jpeg";
 
 function Contact() {
   const [email, setEmail] = useState("");
@@ -10,96 +10,73 @@ function Contact() {
     if (email.trim() === "") {
       alert("Please enter a valid email.");
     } else {
-      alert(`Thank you for subscribing, ${email}! ✨`);
+      alert(`Thank you for subscribing, ${email}!`);
       setEmail("");
     }
   };
 
   return (
-    <section id="contact" className="py-24 px-10 gradient-secondary relative overflow-hidden">
-      {/* Decorative blobs */}
-      <div className="absolute top-0 right-0 w-80 h-80 bg-primary/20 rounded-full blur-3xl -z-10"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/20 rounded-full blur-3xl -z-10"></div>
+    <section className="flex flex-wrap justify-between items-start gap-10 p-10 bg-white min-h-screen box-border max-md:flex-col max-md:p-5">
+      
+      {/* LEFT SECTION */}
+      <div className="flex-1 min-w-[300px]">
+        <p className="text-[30px] font-light text-[#1b1509] mb-2">
+          Follow us on Instagram
+        </p>
 
-      <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-20">
+        <a
+          href="https://www.instagram.com/you_beauty/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-lg text-[#1b1509] mb-5 inline-block hover:underline"
+        >
+          @you_beauty
+        </a>
 
-        {/* LEFT SECTION - Instagram focus */}
-        <div className="flex-1 min-w-[320px] animate-fade-in">
-          <h2 className="text-4xl font-black text-gradient mb-4 font-serif">
-            Join Our Community
-          </h2>
-          <p className="text-gray-600 mb-8 text-lg font-medium">
-            Follow our journey on Instagram for daily inspiration and beauty tips.
-          </p>
+        <div className="flex gap-5 mt-5 max-md:flex-col">
+          <img
+            src={img1}
+            alt="Instagram 1"
+            className="w-[48%] h-[200px] object-cover rounded-lg max-md:w-full max-md:h-auto"
+          />
+          <img
+            src={img2}
+            alt="Instagram 2"
+            className="w-[48%] h-[200px] object-cover rounded-lg max-md:w-full max-md:h-auto"
+          />
+        </div>
+      </div>
 
-          <a
-            href="https://www.instagram.com/melula_copenhagen/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center gap-3 text-2xl font-black text-primary hover:text-primary-dark transition-all duration-300 transform hover:scale-105"
+      {/* RIGHT SECTION */}
+      <div className="flex-1 min-w-[300px]">
+        <h2 className="text-2xl text-[#272727] mb-4">
+          Subscribe
+        </h2>
+
+        <p className="mb-5">
+          Sign up with your email address to receive news and updates.
+        </p>
+
+        <form onSubmit={handleSubmit} className="flex flex-wrap gap-3">
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter your email"
+            className="flex-1 px-3 py-3 border border-gray-300 rounded-md text-base outline-none focus:border-[#1ff4bf]"
+          />
+
+          <button
+            type="submit"
+            className="px-6 py-3 bg-[#d07849] text-white text-xs uppercase rounded-md border border-[#d07849] hover:bg-[#c06839] transition"
           >
-            <span className="p-3 bg-white rounded-2xl shadow-lg group-hover:shadow-primary/20 transition-all">
-              📸
-            </span>
-            @melula_copenhagen
-          </a>
+            Sign Up
+          </button>
+        </form>
 
-          <div className="flex gap-6 mt-10">
-            <div className="relative group w-1/2 overflow-hidden rounded-3xl shadow-2xl">
-              <img
-                src={img1}
-                alt="Daily Glow"
-                className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
-            </div>
-            <div className="relative group w-1/2 overflow-hidden rounded-3xl shadow-2xl">
-              <img
-                src={img2}
-                alt="Pure Ingredients"
-                className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
-            </div>
-          </div>
-        </div>
-
-        {/* RIGHT SECTION - Newsletter focus */}
-        <div className="flex-1 min-w-[320px] bg-white/40 backdrop-blur-xl p-12 rounded-[3rem] shadow-2xl border border-white/60 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          <h3 className="text-3xl font-black text-gray-800 mb-6 font-serif">
-            Stay Updated
-          </h3>
-          <p className="text-gray-600 mb-10 text-lg leading-relaxed">
-            Be the first to know about new arrivals, limited collections, and exclusive member-only offers.
-          </p>
-
-          <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-            <div className="relative">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@example.com"
-                className="w-full px-8 py-5 bg-white rounded-2xl text-lg font-medium border-2 border-transparent focus:border-primary-light focus:ring-4 focus:ring-primary/10 outline-none transition-all duration-300 shadow-inner"
-              />
-              <span className="absolute right-6 top-1/2 -translate-y-1/2 text-primary-light pointer-events-none">✨</span>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full py-5 gradient-primary text-white font-black text-xl rounded-2xl shadow-xl hover:shadow-primary/50 transition-all duration-300 transform hover:scale-105 uppercase tracking-widest relative overflow-hidden group"
-            >
-              <span className="relative z-10">Sign Me Up 💌</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-dark to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </button>
-          </form>
-
-          <div className="mt-10 flex items-center justify-center gap-3 text-xs text-gray-400 font-bold uppercase tracking-widest">
-            <div className="h-0.5 w-8 bg-gray-200"></div>
-            <span>No Spam. Just Magic.</span>
-            <div className="h-0.5 w-8 bg-gray-200"></div>
-          </div>
-        </div>
+        <p className="mt-4 text-sm text-gray-500">
+          We respect your privacy.
+        </p>
       </div>
     </section>
   );

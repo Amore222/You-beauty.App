@@ -13,10 +13,10 @@ function AboutContent() {
                 <div className="mb-16">
                     <h2 className="text-4xl font-bold text-gradient font-serif mb-6 animate-slide-up">Founders</h2>
                     <p className="text-lg leading-relaxed mb-4">
-                        Melula is a Children Fashion brand from Copenhagen, Denmark.
+                        You Beauty is a Natural Beauty brand inspired by Scandinavian simplicity.
                     </p>
                     <p className="text-lg leading-relaxed">
-                        The danish design duo Louise Møllermark and Søren Hougesen joined forces in 2015 focusing on simple and beautiful design aesthetics. Melula is a direct product of this collaboration.
+                        The design duo joined forces in 2024 focusing on simple and beautiful aesthetics suitable for your daily ritual. You Beauty is a direct product of this collaboration.
                     </p>
                 </div>
 
@@ -24,32 +24,32 @@ function AboutContent() {
                 <div className="mb-16">
                     <h2 className="text-4xl font-bold text-gradient font-serif mb-6 animate-slide-up">Mission</h2>
                     <p className="text-lg leading-relaxed mb-4">
-                        We love kids, kids are fun just as they are - active, creative and playfull.
+                        We love natural beauty. Your skin is perfect just as it is - distinctive, radiant, and alive.
                     </p>
                     <p className="text-lg leading-relaxed">
-                        Melula was founded because we couldn’t find children’s shoes with both childlike and playful look in combination with a feel of the simplicity of Scandinavian design.
+                        You Beauty was founded because we couldn’t find skincare that combined effective natural ingredients with the simplicity of Scandinavian design.
                     </p>
                 </div>
 
-                {/* Melula Shoes */}
+                {/* Our Collection */}
                 <div className="mb-16">
-                    <h2 className="text-4xl font-bold text-gradient font-serif mb-6 animate-slide-up">Melula Shoes</h2>
+                    <h2 className="text-4xl font-bold text-gradient font-serif mb-6 animate-slide-up">Our Collection</h2>
                     <p className="text-lg leading-relaxed mb-4">
-                        Shapes and Colors are one of the fundamentals in Melula.
+                        Texture and Scent are fundamentals in our collection.
                     </p>
                     <p className="text-lg leading-relaxed mb-4">
-                        We derive our inspiration from the creative processes of children and how they express themselves while playing. Melula have created a classic stylish shoe that are playful, fun and has a unique colourfull approach to design. Melula shoes are aiming for a unisex approach, unless our patterns guides in a clear direction.
+                        We derive our inspiration from nature's palette. We have created a classic line of essentials that are effective, gentle, and have a unique sensory appeal. Our products aim for a universal approach, suitable for all skin types.
                     </p>
                     <p className="text-lg leading-relaxed">
-                        The shoes is a transition shoe that both can be used for when your little ones needs to look stylish, but also just for everyday use. We are continualy developing new prints and styles, so that Melula can continue to be a brand that dictates trends instead of following them.
+                        Our collection is designed to transition seamlessly from your morning routine to your evening unwind. We are continually developing new formulas so that You Beauty can continue to be a brand that defines self-care.
                     </p>
                 </div>
 
-                {/* Materials */}
+                {/* Ingredients */}
                 <div className="mb-16">
-                    <h2 className="text-4xl font-bold text-gradient font-serif mb-6 animate-slide-up">Materials</h2>
+                    <h2 className="text-4xl font-bold text-gradient font-serif mb-6 animate-slide-up">Ingredients</h2>
                     <p className="text-lg leading-relaxed mb-4">
-                        Quality and comfort are extremely important while creating a shoe for children. That’s why we chose a soft material, which is suitable for the foot. The material and the inner construction stabilizes the ankle but also make it exible enough to bend, which is important for movability as well as Our shoes are made out of strong and durable fabrics. They are easy to clean and breathable for the foot
+                        Quality and purity are extremely important while creating skincare. That’s why we chose organic ingredients that are kind to the skin. Our formulations stabilize moisture levels while allowing the skin to breathe. Our products are made from potent, natural extracts—easy to use and effective.
                     </p>
                 </div>
 
@@ -57,10 +57,10 @@ function AboutContent() {
                 <div className="mb-16">
                     <h2 className="text-4xl font-bold text-gradient font-serif mb-6 animate-slide-up">Transparent and Fair production</h2>
                     <p className="text-lg leading-relaxed mb-4">
-                        We chose to focus heavily on the design and the production as the most important ingredients in the development of the collection. The production of our shoes is an important factor. We cooperate only with manufacturers that have full transparency and works within sound ethical guidelines, fair working conditions and the compliance with environmental standards.
+                        We chose to focus heavily on the formulation and the production as the most important ingredients in our development. We cooperate only with labs that have full transparency and work within sound ethical guidelines, fair working conditions, and compliance with environmental standards.
                     </p>
                     <p className="text-lg leading-relaxed">
-                        Our main shoe manufacture comes from a historical line of shoemakers with there main focus on the creation and development of children’s footwear. A mid- high range productline that is distinguished by its exclusivity and quality of materials. Based in mainland of Portugal
+                        Our main production comes from a historical line of skincare experts with their main focus on the creation and development of organic beauty. A mid-to-high range product line that is distinguished by its exclusivity and quality of ingredients.
                     </p>
                 </div>
 
@@ -68,7 +68,7 @@ function AboutContent() {
                 <div className="mb-16">
                     <h2 className="text-4xl font-bold text-gradient font-serif mb-6 animate-slide-up">Suppliers</h2>
                     <p className="text-lg leading-relaxed">
-                        All Melulas suppliers are based in the southern part of Euope mainly Italy, Spain and Portugal, where there is a long historie of producing materials of the highest quality, ensuring longlivity and a high standard. All of our textiles comes from Portugal, all leather materials are supllied by our Italien and spanish based suppliers.
+                        All our suppliers are based in the southern part of Europe, mainly Italy, Spain, and Portugal, where there is a long history of producing nature's finest oils and extracts. We ensure longevity and a high standard for every bottle.
                     </p>
                 </div>
 

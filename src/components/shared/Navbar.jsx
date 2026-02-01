@@ -1,49 +1,96 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ShoppingCart } from "lucide-react";
+import { ShoppingCart, Menu, X } from "lucide-react";
 import { useCart } from "../../context/CartContext";
-import beauty from "../../assets/you-beauty.png";
 
 function Navbar() {
   const { getCartCount } = useCart();
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const cartCount = getCartCount();
+
   return (
-    <nav className="absolute top-0 left-0 w-full z-50 flex items-center justify-between px-10 py-6 bg-transparent transition-all duration-500">
-      {/* Logo */}
-      <Link to="/" className="text-3xl font-bold text-gradient italic no-underline hover:scale-105 transition-all duration-300 drop-shadow-[0_2px_10px_rgba(208,120,73,0.5)]">
-        You Beauty
-      </Link>
+    <nav className="absolute top-0 left-0 w-full z-50 bg-transparent">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
-      {/* Navigation Links */}
-      <ul className="flex items-center gap-12 list-none m-0 p-0">
-        <li>
-          <Link
-            to="/shop"
-            className="text-white text-sm font-black tracking-[0.2em] no-underline hover:text-accent-light transition-all duration-300 relative group uppercase drop-shadow-lg"
+        {/* ✨ Animated Text Logo */}
+        <div className="flex flex-col leading-none cursor-pointer hover:opacity-90 transition-opacity duration-300">
+          <span
+            className="text-[26px] font-serif italic opacity-0
+                       animate-[fadeIn_1s_ease-out_forwards]"
+            style={{ color: "#e49f86" }}
           >
-            Shop
-            <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full shadow-lg"></span>
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/about"
-            className="text-white text-sm font-black tracking-[0.2em] no-underline hover:text-accent-light transition-all duration-300 relative group uppercase drop-shadow-lg"
-          >
-            About
-            <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full shadow-lg"></span>
-          </Link>
-        </li>
-      </ul>
-
-      {/* Cart */}
-      <Link to="/cart" className="relative text-white cursor-pointer hover:scale-110 transition-transform duration-300 group drop-shadow-xl">
-        <ShoppingCart size={32} className="group-hover:text-accent transition-colors" />
-        {getCartCount() > 0 && (
-          <span className="absolute -top-2 -right-2 gradient-primary text-white text-[10px] font-black px-2 py-1 rounded-full animate-pulse shadow-2xl border-2 border-white">
-            {getCartCount()}
+            You
           </span>
-        )}
-      </Link>
+
+          <span
+            className="text-[14px] tracking-[0.35em] font-medium uppercase -mt-1
+                       opacity-0 animate-[fadeIn_1s_ease-out_forwards]
+                       [animation-delay:200ms]"
+            style={{ color: "#e3a362" }}
+          >
+            Beauty
+          </span>
+        </div>
+
+        {/* Desktop Nav */}
+        <ul className="hidden md:flex items-center gap-10">
+          {["SHOP", "ABOUT"].map((item) => (
+            <li key={item}>
+              <Link
+                to={`/${item.toLowerCase()}`}
+                className="text-[#e3a362] text-sm font-medium tracking-[0.15em]
+                           hover:text-[#d07849] transition-colors"
+              >
+                {item}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        {/* Right Section */}
+        <div className="flex items-center gap-5">
+          {/* Cart */}
+          <Link to="/cart" className="relative cursor-pointer">
+            <ShoppingCart size={24} className="text-white" />
+            <span
+              className="absolute -top-2 -right-2 text-white text-[11px]
+                          font-semibold px-1.5 py-0.5 rounded-full"
+              style={{ backgroundColor: "#d07849" }}
+            >
+              {cartCount}
+            </span>
+          </Link>
+
+          {/* Mobile Menu Button */}
+          <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? (
+              <X size={26} className="text-[#e3a362]" />
+            ) : (
+              <Menu size={26} className="text-[#e3a362]" />
+            )}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="md:hidden bg-[#fff3eb] shadow-lg animate-fade-in">
+          <ul className="flex flex-col items-center gap-6 py-8">
+            {["SHOP", "ABOUT"].map((item) => (
+              <li key={item}>
+                <Link
+                  to={`/${item.toLowerCase()}`}
+                  onClick={() => setMenuOpen(false)}
+                  className="text-[#d07849] text-sm font-semibold tracking-[0.15em] hover:text-[#e49f86] transition-colors"
+                >
+                  {item}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </nav>
   );
 }

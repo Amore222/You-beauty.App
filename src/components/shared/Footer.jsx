@@ -3,72 +3,76 @@ import { Link } from "react-router-dom";
 import { FaInstagram, FaPinterest, FaFacebookF } from "react-icons/fa";
 
 function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="gradient-primary text-white py-16 px-10 relative overflow-hidden">
-      {/* Decorative patterns */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+    <footer className="bg-[#d07849] text-white px-5 py-10 text-center">
 
-      <div className="container mx-auto flex flex-col items-center gap-12">
-        {/* Branding & Mission */}
-        <div className="text-center max-w-lg">
-          <Link to="/" className="text-4xl font-black italic mb-4 block hover:scale-105 transition-transform">
-            You Beauty
+      <div className="flex flex-col items-center gap-8">
+
+        {/* Address Info */}
+        <div className="flex flex-wrap justify-center items-center gap-2 text-xs">
+          <div className="flex flex-col leading-none">
+            <span className="text-[20px] font-serif italic" style={{ color: "#e49f86" }}>
+              You
+            </span>
+            <span className="text-[10px] tracking-[0.35em] font-medium uppercase -mt-1" style={{ color: "#e3a362" }}>
+              Beauty
+            </span>
+          </div>
+          <span>11 Dannevirkegate,</span>
+          <span>København, 1763,</span>
+          <span>Denmark</span>
+          <a
+            href="mailto:hello@youbeauty.com"
+            className="block w-full text-white hover:underline mt-1"
+          >
+            hello@youbeauty.com
+          </a>
+        </div>
+
+        {/* Social Icons */}
+        <div className="flex gap-4 text-xl">
+          <a
+            href="http://instagram.com/you_beauty/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="hover:scale-110 transition-transform"
+          >
+            <FaInstagram />
+          </a>
+
+          <a
+            href="https://www.facebook.com/youbeauty/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            className="hover:scale-110 transition-transform"
+          >
+            <FaFacebookF />
+          </a>
+
+          <a
+            href="https://www.pinterest.com/you_beauty/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Pinterest"
+            className="hover:scale-110 transition-transform"
+          >
+            <FaPinterest />
+          </a>
+        </div>
+
+        {/* Footer Links */}
+        <div className="flex flex-col md:flex-row gap-4 text-[10px] font-semibold uppercase tracking-wide">
+          <Link to="/contact" className="hover:text-gray-300">
+            Contact &amp; Wholesale
           </Link>
-          <p className="text-white/80 font-medium text-sm leading-relaxed mb-8">
-            Elevating your daily ritual with pure, organic, and ethically sourced beauty essentials
-            inspired by Scandinavian simplicity.
-          </p>
-
-          <div className="flex justify-center gap-6">
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-all hover:-translate-y-1">
-              <FaInstagram size={20} />
-            </a>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer" className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-all hover:-translate-y-1">
-              <FaFacebookF size={20} />
-            </a>
-            <a href="https://pinterest.com" target="_blank" rel="noreferrer" className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-all hover:-translate-y-1">
-              <FaPinterest size={20} />
-            </a>
-          </div>
-        </div>
-
-        {/* Info Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full text-center md:text-left border-t border-white/10 pt-12">
-          <div className="space-y-4">
-            <h4 className="text-sm font-black uppercase tracking-widest text-white/60">Contact</h4>
-            <div className="text-sm font-medium space-y-2">
-              <p>152 Katlehong, Johannesburg,</p>
-              <p>South Africa, 1431</p>
-              <a href="mailto:ntiarose3@gmail.com" className="block text-white hover:text-accent transition-colors">ntiarose3@gmail.com</a>
-            </div>
-          </div>
-
-          <div className="space-y-4">
-            <h4 className="text-sm font-black uppercase tracking-widest text-white/60">Explore</h4>
-            <div className="text-sm font-medium flex flex-col gap-2">
-              <Link to="/shop" className="hover:text-accent transition-colors">The Collection</Link>
-              <Link to="/about" className="hover:text-accent transition-colors">Our Story</Link>
-              <a href="#contact" className="hover:text-accent transition-colors">Join Community</a>
-            </div>
-          </div>
-
-          <div className="space-y-4">
-            <h4 className="text-sm font-black uppercase tracking-widest text-white/60">Customer Care</h4>
-            <div className="text-sm font-medium flex flex-col gap-2">
-              <a href="#" className="hover:text-accent transition-colors">Shipping & Returns</a>
-              <a href="#" className="hover:text-accent transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-accent transition-colors">Privacy Policy</a>
-            </div>
-          </div>
-        </div>
-
-        {/* Copyright */}
-        <div className="text-center pt-8 border-t border-white/10 w-full">
-          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40">
-            © {currentYear} You Beauty. All Rights Reserved.
-          </p>
+          <Link to="/terms-and-conditions" className="hover:text-gray-300">
+            Terms and conditions
+          </Link>
+          <Link to="/shipping-returns" className="hover:text-gray-300">
+            Shipping &amp; Returns
+          </Link>
         </div>
       </div>
     </footer>

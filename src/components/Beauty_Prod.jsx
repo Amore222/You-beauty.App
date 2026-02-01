@@ -1,10 +1,7 @@
 import React from "react";
-import hairoil from "../assets/hair-oil.jpeg";
-import pinkscrub from "../assets/pink-scrub.jpeg";
-import handbody  from "../assets/honey-wax.jpeg";
-import perfume from "../assets/Perfume.jpeg";
-import ricecleanser from "../assets/Rice-cleanser.jpeg";
-import ricehandbody from "../assets/facebit.jpeg";
+import handbody  from "../assets/skin-glow.jpeg";
+import ricecleanser from "../assets/vitamin-scrub.jpeg";
+import ricehandbody from "../assets/Makeup.jpeg";
 
 
 
@@ -15,14 +12,14 @@ function Beauty_Prod() {
       {/* Big left image */}
       <img
         src={ricecleanser}
-        alt="pink-scrub"
+        alt="rice-cleanser"
         className="row-span-2 col-span-1 w-full h-full object-cover block"
       />
 
       {/* Top right image */}
       <img
         src={ricehandbody}
-        alt="hair-oil"
+        alt="rice-hand-body"
         className="row-span-1 col-span-1 w-full h-full object-cover block"
       />
 

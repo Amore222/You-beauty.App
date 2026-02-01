@@ -10,6 +10,11 @@ import facebit from '../assets/facebit.jpeg';
 import honeyWax from '../assets/honey-wax.jpeg';
 import handBody from '../assets/hand-body.jpeg';
 import moistureCream from '../assets/mosture-cream.jpeg';
+import avocadoScrub from '../assets/avocado-scrub.jpeg';
+import vitaminScrub from '../assets/vitamin-scrub.jpeg';
+import soapScrub from '../assets/soap-scrub.jpeg';
+import tissueOil from '../assets/tissue-oil.jpeg';
+import showerGel from '../assets/shower-gel.jpeg';
 
 export const products = [
     {
@@ -95,5 +100,40 @@ export const products = [
         price: 240,
         image: moistureCream,
         description: 'Heavyweight moisture cream for intense skin repair and hydration overnight.'
+    },
+    {
+        id: 13,
+        name: 'Avocado Scrub',
+        price: 160,
+        image: avocadoScrub,
+        description: 'Nourishing avocado-based scrub that deeply hydrates while exfoliating. Rich in vitamins for healthy skin.'
+    },
+    {
+        id: 14,
+        name: 'Vitamin C Scrub',
+        price: 175,
+        image: vitaminScrub,
+        description: 'Brightening scrub packed with Vitamin C to even out skin tone and reveal a radiant complexion.'
+    },
+    {
+        id: 15,
+        name: 'Natural Soap Scrub',
+        price: 130,
+        image: soapScrub,
+        description: 'Dual-action soap bar with exfoliating beads. Cleanses and smoothes skin in one easy step.'
+    },
+    {
+        id: 16,
+        name: 'Bio Tissue Oil',
+        price: 210,
+        image: tissueOil,
+        description: 'Specialized oil to improve the appearance of scars and stretch marks. Deeply penetrating and restorative.'
+    },
+    {
+        id: 17,
+        name: 'Refreshing Shower Gel',
+        price: 110,
+        image: showerGel,
+        description: 'Invigorating shower gel that leaves skin feeling fresh and energized. Gentle enough for daily use.'
     }
 ];

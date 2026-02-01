@@ -10,9 +10,9 @@ function About() {
           You Beauty Natural Products
         </h1>
 
-        <p className="text-xl md:text-2xl text-white/90 font-medium leading-relaxed mb-10 animate-slide-up" style={{ animationDelay: '0.1s' }}>
+        <p className="text-xs md:text-2xl text-white/90 font-light leading-relaxed mb-10 animate-slide-up" style={{ animationDelay: '0.1s' }}>
           You Beauty is a modern natural beauty brand focused on self-care, simplicity, and balance.
-          Designed in Denmark and produced with integrity in Portugal, we bring you the finest nature has to offer.
+          Designed in Pretoria and produced with integrity in Cape Town, we bring you the finest nature has to offer.
         </p>
 
         <Link
